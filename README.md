@@ -213,6 +213,9 @@ Step 2. Init git locally and do the first commit:
 git init
 git add *
 git commit -m "Initial Commit"
+git branch -M main
+git remote add origin https://github.com/repo_demo/demo.git
+git push -u origin main
 ```
 
 Step 3. Set up a free account on github or bitbucket and make a copy of the repo there.
