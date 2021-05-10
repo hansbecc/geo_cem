@@ -1,4 +1,4 @@
-# Geo_Cem
+# GeoCEM
 
 GeoNode template project. Generates a django project with GeoNode support.
 
