@@ -1,6 +1,32 @@
 # GeoCEM
 
 GeoNode template project. Generates a django project with GeoNode support.
+## Description
+
+## Live Demo
+
+## Development setup
+
+### Dependencies
+
+### Dependencies installation and setup
+
+#### Docker
+##### Installation
+
+### Project setup
+
+## Testing
+
+## Project Phases
+
+## Wiki
+
+
+
+
+
+
 
 ## Table of Contents
 
