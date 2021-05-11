@@ -12,8 +12,8 @@ This section covers the necessary steps to get the application running on a
 local development machine. It assumes you're using Ubuntu, so you may need
 to adapt some of the commands if this is not true.
 ### Dependencies
-- Docker
-- Docker-compose
+* Docker
+* Docker-compose
 
 ### Dependencies installation and setup
 
