@@ -100,5 +100,31 @@ Step 3. Set up a free account on github or bitbucket and make a copy of the repo
 ## Testing
 
 ## Project Phases
+During the implementation of the project will be constantly updated the following features:
+    * Design the website (style)
+    * Data Migration
+    * User and development documentation
+    * Define the style of the layers maps
 
+### Phase 1 (may 17th)
+    * ** Goals: ** lay the groundwork for the next phases. The goal of this phase was
+mainly to familiarize with the tools that was chosen to adopt in the
+project, and test drive each one.
+    * see all issues that were planned (and delivered) for this phase [here]().
+### Phase 2 (june 7th)
+    * ** Goals: **
+      * Design the basic style for the website.
+      * Migrate the available data.
+      * Configure users accounts
+    * see all issues that were planned (and delivered) for this phase [here]().
+### Phase 3 (july 5th)
+    * ** Goals: **
+      * Link and fill the information from GeoCEM to he Dataverse
+      * Add feature module for fast migration data
+      * Configure the advance search
+    * see all issues that were planned (and delivered) for this phase [here]().
+### Phase 4 (august 2nd)
+     * ** Goals: ** Publish the project
+    * see all issues that were planned (and delivered) for this phase [here]().
 ## Wiki
+   - [Wiki links](https://github.com/hansbecc/geo_cem/wiki) 
