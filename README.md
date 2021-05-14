@@ -113,15 +113,15 @@ project, and test drive each one.
 * see all issues that were planned (and delivered) for this phase [here]().
 ### Phase 2 (june 7th)
 * ** Goals: **
-** Design the basic style for the website.
-** Migrate the available data.
-** Configure users accounts
+  * Design the basic style for the website.
+  * Migrate the available data.
+  * Configure users accounts
 * see all issues that were planned (and delivered) for this phase [here]().
 ### Phase 3 (july 5th)
 * ** Goals: **
-** Link and fill the information from GeoCEM to he Dataverse
-** Add feature module for fast migration data
-** Configure the advance search
+  * Link and fill the information from GeoCEM to he Dataverse
+  * Add feature module for fast migration data
+  * Configure the advance search
 * see all issues that were planned (and delivered) for this phase [here]().
 ### Phase 4 (august 2nd)
 * ** Goals: ** Publish the project
