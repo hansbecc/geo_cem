@@ -97,6 +97,92 @@ Step 3. Set up a free account on github or bitbucket and make a copy of the repo
 
 ### Project setup
 
+Update the templates or the Django models. Once in the bash you can edit the templates or the Django models/classes. From here you can run any standard Django management command.
+
+Whenever you change a template/CSS/Javascript remember to run later:
+
+```bash
+python manage.py collectstatic
+```
+in order to update the files into the statics Docker volume.
+
+** Warning: ** This is an external volume, and a simple restart won’t update it. You have to be careful and keep it aligned with your changes.
+
+Whenever you need to change some settings or environment variable, the easiest thing to do is to:
+
+```bash
+# Stop the container
+docker-compose stop
+
+# Restart the container in Daemon mode
+docker-compose -f docker-compose.yml -f docker-compose.override.<whatever>.yml up -d
+```
+
+Whenever you change the model, remember to run later in the container via bash:
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+#### Backup and Restore from Docker Images
+
+##### Run a Backup
+
+```bash
+SOURCE_URL=$SOURCE_URL TARGET_URL=$TARGET_URL ./{{project_name}}/br/backup.sh $BKP_FOLDER_NAME
+```
+
+- BKP_FOLDER_NAME:
+  Default value = backup_restore
+  Shared Backup Folder name.
+  The scripts assume it is located on "root" e.g.: /$BKP_FOLDER_NAME/
+
+- SOURCE_URL:
+  Source Server URL, the one generating the "backup" file.
+
+- TARGET_URL:
+  Target Server URL, the one which must be synched.
+
+e.g.:
+
+```bash
+docker exec -it django4{{project_name}} sh -c 'SOURCE_URL=$SOURCE_URL TARGET_URL=$TARGET_URL ./{{project_name}}/br/backup.sh $BKP_FOLDER_NAME'
+```
+
+Copy files from container:
+
+```bash
+sudo docker cp django4geo_cem:"/backup_restore" "/opt/"
+```
+Copy files to container:
+
+```bash
+sudo docker cp "/backup_folder/*" django4geo_cem:"/backup_restore/"
+```
+##### Run a Restore
+
+```bash
+SOURCE_URL=$SOURCE_URL TARGET_URL=$TARGET_URL ./{{project_name}}/br/restore.sh $BKP_FOLDER_NAME
+```
+
+- BKP_FOLDER_NAME:
+  Default value = backup_restore
+  Shared Backup Folder name.
+  The scripts assume it is located on "root" e.g.: /$BKP_FOLDER_NAME/
+
+- SOURCE_URL:
+  Source Server URL, the one generating the "backup" file.
+
+- TARGET_URL:
+  Target Server URL, the one which must be synched.
+
+e.g.:
+
+```bash
+docker exec -it django4{{project_name}} sh -c 'SOURCE_URL=$SOURCE_URL TARGET_URL=$TARGET_URL ./{{project_name}}/br/restore.sh $BKP_FOLDER_NAME'
+```
+
 ## Testing
 
 ## Project Phases
