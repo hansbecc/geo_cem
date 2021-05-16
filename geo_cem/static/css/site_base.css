@@ -1,4 +1,4 @@
-/*.navbar-brand {
+.navbar-brand {
   background: url("../img/logo-removebg.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -6,13 +6,6 @@
   text-indent: -9999px;
   height: 60px;
   width: 150px;
-}*/
-.navbar-brand {
-    width: 150px;
-    height: 60px;
-    background: transparent url("../img/logo-removebg.png") no-repeat;
-    background-size: 300px 70px;
-    background-position-y: center;
 }
 body {
   background: #F5F5F5;/*#333333;*/
