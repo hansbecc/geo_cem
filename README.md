@@ -53,12 +53,23 @@ Clone the source code
   ```
 Make an instance out of the Django Template
 ** Note: ** We will call our instance geo_cem. You can change the name at your convenience.
+
+Install virtualenv and virtualenvwrapper, edit .bashrc file:
+
    ```bash
-   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+   #Virtualenvwrapper settings:
+   export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+   export WORKON_HOME=$HOME/.virtualenvs
+   export VIRTUALENVWRAPPER_VIRTUALENV=/home/geonode/.local/bin/virtualenv
+   source ~/.local/bin/virtualenvwrapper.sh
+   ```
+
+   ```bash
+   source ~/.local/bin/virtualenvwrapper.sh
    mkvirtualenv --python=/usr/bin/python3 geo_cem
 
    Alterantively you can also create the virtual env like below
-   python3.8 -m venv /home/geonode/dev/.venvs/geo_cem
+   python3 -m venv /home/geonode/dev/.venvs/geo_cem
    source /home/geonode/dev/.venvs/geo_cem/bin/activate
 
    pip install Django==2.2.12
